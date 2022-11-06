@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var userNameTF: UITextField!
+    
     @IBAction func forgotPasswordButton(_ sender: UIButton) {
         let alert = UIAlertController(title: "000000", message: "Is it your password", preferredStyle: UIAlertController.Style.alert)
     
@@ -26,11 +28,11 @@ class ViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    var userName: String!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        userName = userNameTF.text
     }
 
 
