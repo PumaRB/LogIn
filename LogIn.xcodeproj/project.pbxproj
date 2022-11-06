@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A435D89291838DF00D74824 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A435D88291838DF00D74824 /* ResultViewController.swift */; };
 		5AB5017129182CD100C2A8C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB5017029182CD100C2A8C4 /* AppDelegate.swift */; };
 		5AB5017329182CD100C2A8C4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB5017229182CD100C2A8C4 /* SceneDelegate.swift */; };
 		5AB5017529182CD100C2A8C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB5017429182CD100C2A8C4 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A435D88291838DF00D74824 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		5AB5016D29182CD100C2A8C4 /* LogIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AB5017029182CD100C2A8C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AB5017229182CD100C2A8C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				5AB5017029182CD100C2A8C4 /* AppDelegate.swift */,
 				5AB5017229182CD100C2A8C4 /* SceneDelegate.swift */,
+				5A435D88291838DF00D74824 /* ResultViewController.swift */,
 				5AB5017429182CD100C2A8C4 /* ViewController.swift */,
 				5AB5017629182CD100C2A8C4 /* Main.storyboard */,
 				5AB5017929182CD200C2A8C4 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				5AB5017529182CD100C2A8C4 /* ViewController.swift in Sources */,
 				5AB5017129182CD100C2A8C4 /* AppDelegate.swift in Sources */,
 				5AB5017329182CD100C2A8C4 /* SceneDelegate.swift in Sources */,
+				5A435D89291838DF00D74824 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
