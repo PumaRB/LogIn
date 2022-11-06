@@ -27,14 +27,9 @@ class ViewController: UIViewController {
 
         self.present(alert, animated: true, completion: nil)
     }
-    
-    var userName: String!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        userName = userNameTF.text
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let resultViewController = segue.destination as? ResultViewController else {return}
+        resultViewController.userName = userNameTF.text
     }
-
-
 }
-

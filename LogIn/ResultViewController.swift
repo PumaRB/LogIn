@@ -9,15 +9,12 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
-
+    var userName: String!
+    
     @IBOutlet var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let userNameField = segue.destination as? ViewController else {return}
-        resultLabel.text = userNameField.userName
+        resultLabel.text = "Welcome,\(userName!)"
     }
 }
