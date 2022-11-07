@@ -57,12 +57,12 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pss-TP-7Iu">
-                                <rect key="frame" x="98" y="320" width="194" height="34.333333333333314"/>
+                                <rect key="frame" x="117.00000000000001" y="320" width="156.33333333333337" height="34.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34.333333333333314" id="y7k-GP-Oeq"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="I forgot user password"/>
+                                <buttonConfiguration key="configuration" style="plain" title="I forgot password"/>
                                 <connections>
                                     <action selector="forgotNameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YNQ-ah-otk"/>
                                 </connections>
@@ -70,8 +70,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1F-4B-tEx">
                                 <rect key="frame" x="16" y="419" width="358" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Log in"/>
                                 <connections>
+                                    <action selector="logInButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cf8-fJ-ov1"/>
                                     <segue destination="yEw-sm-mv8" kind="show" id="dHs-XG-2Ib"/>
                                 </connections>
                             </button>
@@ -98,6 +99,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="LT0-5m-tx8"/>
                     <connections>
+                        <outlet property="passworsTF" destination="PWB-us-Glm" id="Sox-9M-46C"/>
                         <outlet property="userNameTF" destination="Ojs-cg-oTa" id="hao-O9-Qhl"/>
                     </connections>
                 </viewController>
@@ -113,16 +115,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uG-W3-9t8">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uG-W3-9t8">
                                 <rect key="frame" x="153" y="397" width="85" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.39921401020000002" blue="0.28897655119999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
+                                <connections>
+                                    <segue destination="U0s-kX-Env" kind="unwind" unwindAction="inwindFor:" id="YUv-hD-Z5k"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome, user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoO-a9-gsw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoO-a9-gsw">
                                 <rect key="frame" x="73" y="194" width="244" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GoO-a9-gsw" secondAttribute="height" multiplier="244:47" id="mME-gD-cIf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -130,6 +136,13 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UQX-hZ-bCr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GoO-a9-gsw" firstAttribute="centerX" secondItem="mcJ-IJ-oqm" secondAttribute="centerX" id="Ujn-t2-EJY"/>
+                            <constraint firstItem="3uG-W3-9t8" firstAttribute="leading" secondItem="UQX-hZ-bCr" secondAttribute="leading" constant="153" id="WPi-Vu-BmS"/>
+                            <constraint firstItem="UQX-hZ-bCr" firstAttribute="bottom" secondItem="3uG-W3-9t8" secondAttribute="bottom" constant="378" id="hhT-Ro-YZD"/>
+                            <constraint firstItem="GoO-a9-gsw" firstAttribute="centerX" secondItem="3uG-W3-9t8" secondAttribute="centerX" id="oc8-X9-nSw"/>
+                            <constraint firstItem="GoO-a9-gsw" firstAttribute="top" secondItem="UQX-hZ-bCr" secondAttribute="top" constant="103" id="ozj-Zj-ofe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" style="editor" id="mtO-Tk-Qlh"/>
                     <connections>
@@ -137,6 +150,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pi0-zh-Jyk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="U0s-kX-Env" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1908" y="4"/>
         </scene>
